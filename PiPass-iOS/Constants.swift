@@ -10,23 +10,23 @@ import Foundation
 
 struct Constants {
     struct JsonEnpoints {
-        static var CURRENT_STATE = "%@/assets/json/current_state.json"
-        static var CURRENT_LIST = "%@/assets/json/current_list.json"
-        static var CURRENT_ZONE_ENDTIME = "%@/assets/json/current_zone_end_time.json"
-        static var PIPASS_CONFIG = "%@/assets/json/pipass_config.json"
-        static var PIPASS_VERSION = "%@/assets/json/pipass_version.json"
+        static var CURRENT_STATE = "http://%@/assets/json/current_state.json"
+        static var CURRENT_LIST = "http://%@/assets/json/current_list.json"
+        static var CURRENT_ZONE_ENDTIME = "http://%@/assets/json/current_zone_end_time.json"
+        static var PIPASS_CONFIG = "http://%@/assets/json/pipass_config.json"
+        static var PIPASS_VERSION = "http://%@/assets/json/pipass_version.json"
     }
     
     struct PhpEndPoints {
-        static var ADVANCE = "%@/assets/php/advance.php"
-        static var LOGS = "%@/assets/php/pipass_logs.php"
-        static var REFRESH = "%@/assets/php/refresh.php"
-        static var RESET_NETWORK = "%@/assets/php/reset_network.php"
-        static var RESTART_PI = "%@/assets/php/restart_pi.php"
-        static var SETTINGS = "%@/assets/php/settings.php"
-        static var SHUTDOWN_PI = "%@/assets/php/shutdown_pi.php"
-        static var START = "%@/assets/php/start.php"
-        static var STOP = "%@/assets/php/stop.php"
-        static var UPDATE = "%@/assets/php/update.php"
+        static var ADVANCE = "http://%@/assets/php/advance.php"
+        static var LOGS = "http://%@/assets/php/pipass_logs.php"
+        static var REFRESH = "http://%@/assets/php/refresh.php"
+        static var RESET_NETWORK = "http://%@/assets/php/reset_network.php"
+        static var RESTART_PI = "http://%@/assets/php/restart_pi.php"
+        static var SETTINGS = "http://%@/assets/php/settings.php"
+        static var SHUTDOWN_PI = "http://%@/assets/php/shutdown_pi.php"
+        static var START = "http://%@/assets/php/start.php"
+        static var STOP = "http://%@/assets/php/stop.php"
+        static var UPDATE = "http://%@/assets/php/update.php"
     }
 }

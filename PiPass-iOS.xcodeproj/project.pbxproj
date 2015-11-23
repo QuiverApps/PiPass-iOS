@@ -17,6 +17,7 @@
 		6689C7611C02A9CD008B8275 /* MantelModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6689C7601C02A9CD008B8275 /* MantelModelBase.m */; };
 		6689C7641C02AB03008B8275 /* CurrentState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6689C7631C02AB03008B8275 /* CurrentState.m */; };
 		6689C7671C02AD49008B8275 /* ChildObjectValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6689C7661C02AD49008B8275 /* ChildObjectValue.m */; };
+		6689C76A1C02AEFE008B8275 /* GetCurrentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6689C7691C02AEFE008B8275 /* GetCurrentState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		6689C7631C02AB03008B8275 /* CurrentState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentState.m; sourceTree = "<group>"; };
 		6689C7651C02AD49008B8275 /* ChildObjectValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildObjectValue.h; sourceTree = "<group>"; };
 		6689C7661C02AD49008B8275 /* ChildObjectValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildObjectValue.m; sourceTree = "<group>"; };
+		6689C7691C02AEFE008B8275 /* GetCurrentState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCurrentState.swift; sourceTree = "<group>"; };
 		9E13D521D952378E3BFA8721 /* Pods_PiPass_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiPass_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEEAAECA0349189D82C2798A /* Pods-PiPass-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiPass-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PiPass-iOS/Pods-PiPass-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				6689C7471C0288ED008B8275 /* ViewController.swift */,
+				6689C7681C02AED6008B8275 /* Networking */,
 				6689C75A1C028EF7008B8275 /* Models */,
 				6689C7591C028EF1008B8275 /* Resources */,
 			);
@@ -105,6 +108,14 @@
 				6689C7601C02A9CD008B8275 /* MantelModelBase.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		6689C7681C02AED6008B8275 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6689C7691C02AEFE008B8275 /* GetCurrentState.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		BD06CA67F9020EE613AD4D56 /* Frameworks */ = {
@@ -246,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6689C76A1C02AEFE008B8275 /* GetCurrentState.swift in Sources */,
 				6689C7611C02A9CD008B8275 /* MantelModelBase.m in Sources */,
 				6689C7671C02AD49008B8275 /* ChildObjectValue.m in Sources */,
 				6689C7481C0288ED008B8275 /* ViewController.swift in Sources */,

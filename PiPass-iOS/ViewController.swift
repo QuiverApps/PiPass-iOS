@@ -12,7 +12,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        GetCurrentState.doApiCall("10.0.1.13", success: { (currentState:CurrentState) -> Void in
+            //code
+            NSLog("%@",currentState.mac.value)
+            NSLog("%@",currentState.ssid.value)
+            NSLog("%@",currentState.updated.value)
+            NSLog("%@",currentState.zoneDescription.value)
+
+            }) { () -> Void in
+                //code
+        }
     }
 
     override func didReceiveMemoryWarning() {
