@@ -12,9 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        PostStartPiPass.doApiCall("10.0.1.13")
     }
 
     override func didReceiveMemoryWarning() {
