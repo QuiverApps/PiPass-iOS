@@ -14,6 +14,9 @@
 		6689C74D1C0288ED008B8275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6689C74C1C0288ED008B8275 /* Assets.xcassets */; };
 		6689C7501C0288ED008B8275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6689C74E1C0288ED008B8275 /* LaunchScreen.storyboard */; };
 		6689C7581C028961008B8275 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6689C7571C028961008B8275 /* Constants.swift */; };
+		6689C7611C02A9CD008B8275 /* MantelModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6689C7601C02A9CD008B8275 /* MantelModelBase.m */; };
+		6689C7641C02AB03008B8275 /* CurrentState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6689C7631C02AB03008B8275 /* CurrentState.m */; };
+		6689C7671C02AD49008B8275 /* ChildObjectValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6689C7661C02AD49008B8275 /* ChildObjectValue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		6689C74F1C0288ED008B8275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6689C7511C0288ED008B8275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6689C7571C028961008B8275 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6689C75B1C02A9A7008B8275 /* PiPass-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PiPass-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		6689C75F1C02A9CD008B8275 /* MantelModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MantelModelBase.h; sourceTree = "<group>"; };
+		6689C7601C02A9CD008B8275 /* MantelModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MantelModelBase.m; sourceTree = "<group>"; };
+		6689C7621C02AB03008B8275 /* CurrentState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentState.h; sourceTree = "<group>"; };
+		6689C7631C02AB03008B8275 /* CurrentState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentState.m; sourceTree = "<group>"; };
+		6689C7651C02AD49008B8275 /* ChildObjectValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildObjectValue.h; sourceTree = "<group>"; };
+		6689C7661C02AD49008B8275 /* ChildObjectValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildObjectValue.m; sourceTree = "<group>"; };
 		9E13D521D952378E3BFA8721 /* Pods_PiPass_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiPass_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEEAAECA0349189D82C2798A /* Pods-PiPass-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiPass-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PiPass-iOS/Pods-PiPass-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,15 +73,38 @@
 		6689C7441C0288ED008B8275 /* PiPass-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				6689C7451C0288ED008B8275 /* AppDelegate.swift */,
 				6689C7471C0288ED008B8275 /* ViewController.swift */,
-				6689C7491C0288ED008B8275 /* Main.storyboard */,
-				6689C74C1C0288ED008B8275 /* Assets.xcassets */,
-				6689C74E1C0288ED008B8275 /* LaunchScreen.storyboard */,
-				6689C7511C0288ED008B8275 /* Info.plist */,
-				6689C7571C028961008B8275 /* Constants.swift */,
+				6689C75A1C028EF7008B8275 /* Models */,
+				6689C7591C028EF1008B8275 /* Resources */,
 			);
 			path = "PiPass-iOS";
+			sourceTree = "<group>";
+		};
+		6689C7591C028EF1008B8275 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6689C75B1C02A9A7008B8275 /* PiPass-iOS-Bridging-Header.h */,
+				6689C7451C0288ED008B8275 /* AppDelegate.swift */,
+				6689C7571C028961008B8275 /* Constants.swift */,
+				6689C7491C0288ED008B8275 /* Main.storyboard */,
+				6689C74E1C0288ED008B8275 /* LaunchScreen.storyboard */,
+				6689C74C1C0288ED008B8275 /* Assets.xcassets */,
+				6689C7511C0288ED008B8275 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6689C75A1C028EF7008B8275 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6689C7621C02AB03008B8275 /* CurrentState.h */,
+				6689C7631C02AB03008B8275 /* CurrentState.m */,
+				6689C7651C02AD49008B8275 /* ChildObjectValue.h */,
+				6689C7661C02AD49008B8275 /* ChildObjectValue.m */,
+				6689C75F1C02A9CD008B8275 /* MantelModelBase.h */,
+				6689C7601C02A9CD008B8275 /* MantelModelBase.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		BD06CA67F9020EE613AD4D56 /* Frameworks */ = {
@@ -213,9 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6689C7611C02A9CD008B8275 /* MantelModelBase.m in Sources */,
+				6689C7671C02AD49008B8275 /* ChildObjectValue.m in Sources */,
 				6689C7481C0288ED008B8275 /* ViewController.swift in Sources */,
 				6689C7461C0288ED008B8275 /* AppDelegate.swift in Sources */,
 				6689C7581C028961008B8275 /* Constants.swift in Sources */,
+				6689C7641C02AB03008B8275 /* CurrentState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,11 +365,14 @@
 			baseConfigurationReference = EEEAAECA0349189D82C2798A /* Pods-PiPass-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "PiPass-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.quiverapps.PiPass-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PiPass-iOS/PiPass-iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -342,11 +381,13 @@
 			baseConfigurationReference = 02572B031D3A9E39CBFA7A90 /* Pods-PiPass-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "PiPass-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.quiverapps.PiPass-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PiPass-iOS/PiPass-iOS-Bridging-Header.h";
 			};
 			name = Release;
 		};
