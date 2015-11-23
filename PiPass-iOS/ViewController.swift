@@ -14,10 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        GetCurrentZoneEndTime.doApiCall("10.0.1.13", success: { (zoneEndTime:CurrentZoneEndTime) -> Void in
-            NSLog("RESPONSE")
-            }) { () -> Void in
-        }
+        PostStartPiPass.doApiCall("10.0.1.13")
     }
 
     override func didReceiveMemoryWarning() {
