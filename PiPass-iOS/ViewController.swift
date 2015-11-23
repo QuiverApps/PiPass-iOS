@@ -14,7 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        GetPiPassConfig.doApiCall("10.0.1.13", success: { (config:PiPassConfig) -> Void in
+        GetCurrentZoneEndTime.doApiCall("10.0.1.13", success: { (zoneEndTime:CurrentZoneEndTime) -> Void in
+            NSLog("RESPONSE")
             }) { () -> Void in
         }
     }

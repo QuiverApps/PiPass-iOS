@@ -6,3 +6,4 @@
 #import "CurrentState.h"
 #import "ChildObjectValue.h"
 #import "PiPassConfig.h"
+#import "CurrentZoneEndTime.h"
