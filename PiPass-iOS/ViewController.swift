@@ -14,15 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        GetCurrentState.doApiCall("10.0.1.13", success: { (currentState:CurrentState) -> Void in
-            //code
-            NSLog("%@",currentState.mac.value)
-            NSLog("%@",currentState.ssid.value)
-            NSLog("%@",currentState.updated.value)
-            NSLog("%@",currentState.zoneDescription.value)
-
+        GetPiPassConfig.doApiCall("10.0.1.13", success: { (config:PiPassConfig) -> Void in
             }) { () -> Void in
-                //code
         }
     }
 

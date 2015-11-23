@@ -5,3 +5,4 @@
 #import <Mantle/Mantle.h>
 #import "CurrentState.h"
 #import "ChildObjectValue.h"
+#import "PiPassConfig.h"
