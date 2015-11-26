@@ -7,5 +7,5 @@ target 'PiPass-iOS' do
     pod 'Alamofire', '~> 3.0' 
     pod 'MMWormhole', '~> 2.0.0'
     pod 'Mantle', '~> 2.0.5'
+    pod 'MBProgressHUD', '~> 0.9.1'
 end
-

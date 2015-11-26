@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PiPass-iOS/Alamofire.framework"
+  install_framework "Pods-PiPass-iOS/MBProgressHUD.framework"
   install_framework "Pods-PiPass-iOS/MMWormhole.framework"
   install_framework "Pods-PiPass-iOS/Mantle.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-PiPass-iOS/Alamofire.framework"
+  install_framework "Pods-PiPass-iOS/MBProgressHUD.framework"
   install_framework "Pods-PiPass-iOS/MMWormhole.framework"
   install_framework "Pods-PiPass-iOS/Mantle.framework"
 fi

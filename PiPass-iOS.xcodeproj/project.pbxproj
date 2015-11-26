@@ -25,6 +25,9 @@
 		66BEE6111C02C48A00FBAB30 /* GetStopPiPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEE6101C02C48A00FBAB30 /* GetStopPiPass.swift */; };
 		66BEE6131C02C4E800FBAB30 /* GetStartPiPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEE6121C02C4E800FBAB30 /* GetStartPiPass.swift */; };
 		66CCB6EA1C038E9600805B82 /* PostUpdateSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCB6E91C038E9600805B82 /* PostUpdateSettings.swift */; };
+		66DBBE781C07745F00DADDA3 /* GetShutdownPi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DBBE771C07745F00DADDA3 /* GetShutdownPi.swift */; };
+		66DBBE7A1C0774AD00DADDA3 /* GetRestartPi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DBBE791C0774AD00DADDA3 /* GetRestartPi.swift */; };
+		66DBBE7C1C0774DC00DADDA3 /* GetRestartNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DBBE7B1C0774DC00DADDA3 /* GetRestartNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		66BEE6101C02C48A00FBAB30 /* GetStopPiPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStopPiPass.swift; sourceTree = "<group>"; };
 		66BEE6121C02C4E800FBAB30 /* GetStartPiPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartPiPass.swift; sourceTree = "<group>"; };
 		66CCB6E91C038E9600805B82 /* PostUpdateSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUpdateSettings.swift; sourceTree = "<group>"; };
+		66DBBE771C07745F00DADDA3 /* GetShutdownPi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetShutdownPi.swift; sourceTree = "<group>"; };
+		66DBBE791C0774AD00DADDA3 /* GetRestartPi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRestartPi.swift; sourceTree = "<group>"; };
+		66DBBE7B1C0774DC00DADDA3 /* GetRestartNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRestartNetwork.swift; sourceTree = "<group>"; };
 		9E13D521D952378E3BFA8721 /* Pods_PiPass_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiPass_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEEAAECA0349189D82C2798A /* Pods-PiPass-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiPass-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PiPass-iOS/Pods-PiPass-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +145,9 @@
 				66BEE6101C02C48A00FBAB30 /* GetStopPiPass.swift */,
 				66BEE6121C02C4E800FBAB30 /* GetStartPiPass.swift */,
 				66CCB6E91C038E9600805B82 /* PostUpdateSettings.swift */,
+				66DBBE771C07745F00DADDA3 /* GetShutdownPi.swift */,
+				66DBBE791C0774AD00DADDA3 /* GetRestartPi.swift */,
+				66DBBE7B1C0774DC00DADDA3 /* GetRestartNetwork.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -285,13 +294,16 @@
 				6689C76A1C02AEFE008B8275 /* GetCurrentState.swift in Sources */,
 				6689C7611C02A9CD008B8275 /* MantelModelBase.m in Sources */,
 				66BEE60D1C02BDB100FBAB30 /* CurrentZoneEndTime.m in Sources */,
+				66DBBE781C07745F00DADDA3 /* GetShutdownPi.swift in Sources */,
 				66BEE6111C02C48A00FBAB30 /* GetStopPiPass.swift in Sources */,
 				66BEE60A1C02BA5000FBAB30 /* GetPiPassConfig.swift in Sources */,
+				66DBBE7C1C0774DC00DADDA3 /* GetRestartNetwork.swift in Sources */,
 				66BEE6131C02C4E800FBAB30 /* GetStartPiPass.swift in Sources */,
 				66BEE60F1C02BE2500FBAB30 /* GetCurrentZoneEndTime.swift in Sources */,
 				6689C7671C02AD49008B8275 /* ChildObjectValue.m in Sources */,
 				6689C7481C0288ED008B8275 /* ViewController.swift in Sources */,
 				66CCB6EA1C038E9600805B82 /* PostUpdateSettings.swift in Sources */,
+				66DBBE7A1C0774AD00DADDA3 /* GetRestartPi.swift in Sources */,
 				6689C7461C0288ED008B8275 /* AppDelegate.swift in Sources */,
 				6689C7581C028961008B8275 /* Constants.swift in Sources */,
 				6689C7641C02AB03008B8275 /* CurrentState.m in Sources */,
