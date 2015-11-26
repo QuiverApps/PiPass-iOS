@@ -8,33 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
+    
+    let ipAddress = "10.0.1.13"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        GetPiPassConfig.doApiCall("10.0.1.13", success: { (config:PiPassConfig) -> Void in
-            
-            config.cycleMinutes = "1"
-            
-            PostUpdateSettings.doApiCall("10.0.1.13", config: config, success: { () -> Void in
-                GetStartPiPass.doApiCall("10.0.1.13")
-                }, failure: { () -> Void in
-                    
-            })
-            
-            }) { () -> Void in
-                
-        }
-        
-        //GetStartPiPass.doApiCall("10.0.1.13")
-        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 
 
 }
