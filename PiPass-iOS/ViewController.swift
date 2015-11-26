@@ -66,6 +66,10 @@ class ViewController: UITableViewController {
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         GetPiPassConfig.doApiCall(ipAddress, success: { (config:PiPassConfig) -> Void in
             MBProgressHUD.hideHUDForView(self.view, animated: true)
+            let settings = self.storyboard?.instantiateViewControllerWithIdentifier("SettingsTableViewController") as! SettingsTableViewController
+            settings.piPassConfig = config;
+            self.navigationController!.pushViewController(settings, animated: true)
+            
             }) { () -> Void in
                 MBProgressHUD.hideHUDForView(self.view, animated: true)
         }
