@@ -1,5 +1,5 @@
 //
-//  PostStopPiPass.swift
+//  GetStopPiPass.swift
 //  PiPass-iOS
 //
 //  Created by Jeremy Roberts on 11/22/15.
@@ -8,12 +8,11 @@
 
 import Alamofire
 
-public class PostStopPiPass: NSObject {
+public class GetStopPiPass: NSObject {
     public static func doApiCall(rpiAddress:String) {
         
         let address = String(format: Constants.PhpEndPoints.STOP, arguments: [rpiAddress])
         
-        Alamofire.request(.POST, address)
-        NSLog("STOPPING PIPASS")
+        Alamofire.request(.GET, address)
     }
 }
