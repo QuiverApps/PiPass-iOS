@@ -13,13 +13,6 @@ public class GetShutdownPi: NSObject {
         
         let address = String(format: Constants.PhpEndPoints.SHUTDOWN_PI, arguments: [rpiAddress])
         
-        Alamofire.request(.GET, address).responseString { response in
-            
-            if(response.result.isSuccess) {
-                success()
-            } else {
-                failure()
-            }
-        }
+        GetBaseStringRequest.doApiCall(address, success: success, failure: failure)
     }
 }

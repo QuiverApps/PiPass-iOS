@@ -13,13 +13,6 @@ public class GetStartPiPass: NSObject {
         
         let address = String(format: Constants.PhpEndPoints.START, arguments: [rpiAddress])
         
-        Alamofire.request(.GET, address).responseString { response in
-            
-            if(response.result.isSuccess) {
-                success()
-            } else {
-                failure()
-            }
-        }
+        GetBaseStringRequest.doApiCall(address, success: success, failure: failure)
     }
 }

@@ -13,13 +13,6 @@ public class GetStopPiPass: NSObject {
         
         let address = String(format: Constants.PhpEndPoints.STOP, arguments: [rpiAddress])
         
-        Alamofire.request(.GET, address).responseString { response in
-            
-            if(response.result.isSuccess) {
-                success()
-            } else {
-                failure()
-            }
-        }
+        GetBaseStringRequest.doApiCall(address, success: success, failure: failure)
     }
 }
