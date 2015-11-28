@@ -13,7 +13,7 @@ struct Constants {
         static var CURRENT_STATE = "http://%@/assets/json/current_state.json"
         static var CURRENT_LIST = "http://%@/assets/json/current_list.json"
         static var CURRENT_ZONE_ENDTIME = "http://%@/assets/json/current_zone_end_time.json"
-        static var PIPASS_CONFIG = "http://%@/assets/json/pipass_config.json"
+        static var PIPASS_CONFIG = "http://%@/assets/json/pipass_config.json?cache=%d"
         static var PIPASS_VERSION = "http://%@/assets/json/pipass_version.json"
     }
     
@@ -28,5 +28,10 @@ struct Constants {
         static var START = "http://%@/assets/php/start.php"
         static var STOP = "http://%@/assets/php/stop.php"
         static var UPDATE = "http://%@/assets/php/update.php"
+    }
+    
+    struct PiPassConfig {
+        static var ON = "on"
+        static var OFF = "off"
     }
 }

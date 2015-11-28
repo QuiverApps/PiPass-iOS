@@ -12,7 +12,8 @@ import Mantle
 public class GetPiPassConfig: NSObject {
     public static func doApiCall(rpiAddress:String, success:(PiPassConfig) -> Void, failure:() -> Void) {
         
-        let address = String(format: Constants.JsonEnpoints.PIPASS_CONFIG, arguments: [rpiAddress])
+        let cache = Int(arc4random_uniform(999) + 1)
+        let address = String(format: Constants.JsonEnpoints.PIPASS_CONFIG, arguments: [rpiAddress,cache])
         
         Alamofire.request(.GET, address)
             .responseJSON { response in
