@@ -22,4 +22,12 @@
              @"dashboard":@"DASHBOARD"
              };
 }
+
+- (NSArray *)authenticationList {
+    if(self.authentication.length) {
+        return [self.authentication componentsSeparatedByString:@"\n"];
+    }
+    
+    return [[NSArray alloc] init];
+}
 @end

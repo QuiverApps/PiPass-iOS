@@ -14,6 +14,7 @@ public class SettingsTableViewController: UITableViewController {
     var shuffleZonesSwitch:UISwitch!
     var hostApdSecuritySwitch:UISwitch!
     var streetPassCycleTimeTextField:UITextField!
+    var authenticationList:NSArray!
     
     struct SectionNames {
         static var EDITABLE = 0
@@ -26,23 +27,9 @@ public class SettingsTableViewController: UITableViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        setupFields()
+        self.authenticationList = self.piPassConfig.authenticationList()
     }
     
-    func setupFields() {
-        /*if let _ = piPassConfig.shuffle {
-            self.shuffleZonesSwitch.setOn(true, animated: false)
-        }
-        
-        if let _ = piPassConfig.hostapdSecurity {
-            self.hostApdSecuritySwitch.setOn(true, animated: false)
-        }
-        
-        if let text = piPassConfig.cycleMinutes {
-            self.streetPassCycleTimeTextField.text = text
-        }*/
-    }
-        
     func updatePiPassConfig() {
         
     }
@@ -89,8 +76,14 @@ public class SettingsTableViewController: UITableViewController {
     func setupAddMacSection(indexPath:NSIndexPath) -> UITableViewCell {
         let tableViewCell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "")
         
-        tableViewCell.textLabel?.text = "Add 3DS"
-        tableViewCell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        if(indexPath.row != self.authenticationList.count) {
+            tableViewCell.selectionStyle = UITableViewCellSelectionStyle.None
+            tableViewCell.textLabel?.text = self.authenticationList[indexPath.row] as? String
+        } else {
+            tableViewCell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            tableViewCell.textLabel?.text = "Add a 3DS"
+        }
+        
         
         return tableViewCell
     }
@@ -103,7 +96,7 @@ public class SettingsTableViewController: UITableViewController {
         } else if(section == SectionNames.READ_ONLY) {
             return 4
         } else if(section == SectionNames.ADD_MAC) {
-            return 1
+            return self.authenticationList.count + 1
         }
         
         return 1;
@@ -124,6 +117,14 @@ public class SettingsTableViewController: UITableViewController {
         }
         
         return UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "");
+    }
+    
+    override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        if(indexPath.section == SectionNames.ADD_MAC) {
+            
+        }
     }
 
 }

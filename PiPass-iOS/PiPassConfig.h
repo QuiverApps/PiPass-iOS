@@ -18,4 +18,6 @@
 @property (nonatomic, strong) NSString *authentication;
 @property (nonatomic, strong) NSString *driver;
 @property (nonatomic, strong) NSString *dashboard;
+
+- (NSArray *)authenticationList;
 @end
